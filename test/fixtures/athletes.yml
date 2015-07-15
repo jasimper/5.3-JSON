@@ -1,0 +1,7 @@
+one:
+  name: Athlete
+  sport: Football
+  weight: 250 lbs
+  height: 5'9"
+  personal_record: 2001 MVP
+  retired_at: 2010-02-01
