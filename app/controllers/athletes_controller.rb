@@ -12,7 +12,7 @@ class AthletesController < ApplicationController
       if @athlete.save
         format.json { render json: @athlete }
       else
-        render json: {error: "Athlete could not be added."}, status: 422
+        format.json { render json: @athlete.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -30,7 +30,7 @@ class AthletesController < ApplicationController
       if @athlete.update_attributes(athlete_params)
         format.json { render json: @athlete }
       else
-        render json: {error: "Athlete could not be editted."}, status: 422
+        format.json { render json: @athlete.errors, status: :unprocessable_entity }
       end
   end
 
